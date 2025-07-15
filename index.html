@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบประเมินการฝึกงานนักศึกษา - เทคโนโลยีดิจิทัลและนวัตกรรม</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎓</div>
+            <h1 class="title">แบบประเมินการฝึกงานนักศึกษาสาขาวิชาเทคโนโลยีดิจิทัลและนวัตกรรม</h1>
+        </div>
+
+        <div class="content">
+            <div class="evaluation-instructions">
+                <h3>วิธีการประเมิน</h3>
+                <p>แบบประเมินผลประกอบด้วย 6 ด้าน ดังนี้</p>
+                <ol>
+                    <li>คุณธรรม จริยธรรม</li>
+                    <li>ความรู้</li>
+                    <li>ทักษะทางปัญญา</li>
+                    <li>ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบ</li>
+                    <li>ทักษะการวิเคราะห์เชิงตัวเลข การสื่อสาร และการใช้เทคโนโลยีสารสนเทศ</li>
+                    <li>ทักษะการปฏิบัติงาน</li>
+                </ol>
+                <br>
+                <p><strong>โดยมีลำดับคะแนนในการประเมิน ดังนี้</strong></p>
+                <ul>
+                    <li><strong>คะแนนดีมาก (5)</strong> นักศึกษาปฏิบัติงานที่ได้รับมอบหมายอย่างเสมอต้นเสมอปลาย และดีเลิศเกินความคาดหมาย</li>
+                    <li><strong>คะแนนดี (4)</strong> นักศึกษาปฏิบัติงานที่ได้รับมอบหมายอย่างเสมอต้นเสมอปลาย และปฏิบัติงานจนสำเร็จในระดับที่น่าพอใจ</li>
+                    <li><strong>คะแนนปานกลาง (3)</strong> นักศึกษาปฏิบัติงานได้ต่ำกว่าที่ควรเป็นเล็กน้อย แต่สามารถปฏิบัติงานที่ได้รับมอบหมายจนสำเร็จเป็นที่น่าพอใจ</li>
+                    <li><strong>คะแนนพอใช้ (2)</strong> นักศึกษาปฏิบัติงานได้ต่ำกว่าความคาดหมาย แต่ก็ปฏิบัติงานจนสำเร็จเป็นที่น่าพอใจ</li>
+                    <li><strong>คะแนนต้องปรับปรุง (1)</strong> นักศึกษาปฏิบัติไม่เป็นไปตามความคาดหมาย มีข้อบกพร่องในการทำงานเป็นอย่างมาก</li>
+                </ul>
+            </div>
+
+            <form id="evaluationForm">
+                <!-- Basic Information -->
+                <div class="section">
+                    <div class="form-group">
+                        <label class="form-label" for="workplace">ชื่อสถานประกอบการ *</label>
+                        <input type="text" id="workplace" name="workplace" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">ชื่อ-สกุล (ผู้ประเมิน) *</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="position">ตำแหน่งงาน (ผู้ประเมิน) *</label>
+                        <input type="text" id="position" name="position" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phoneNumber">เบอร์โทรศัพท์ติดต่อ (ผู้ประเมิน) *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email (ผู้ประเมิน) *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="internId">รหัสนักศึกษาฝึกงาน *</label>
+                        <input type="text" id="internId" name="internId" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="internFullName">ชื่อ-สกุล (นักศึกษาฝึกงาน) *</label>
+                        <input type="text" id="internFullName" name="internFullName" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Evaluation Sections -->
+                <div class="evaluation-section">
+                    <h3 class="section-title">1. คุณธรรม จริยธรรม</h3>
+                    <div class="question">
+                        <div class="question-text">1.1) เข้าใจและซาบซึ้งในวัฒนธรรมไทย ตระหนักในคุณค่าของระบบคุณธรรม จริยธรรมเสียสละและซื่อสัตย์สุจริต</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q1_1" name="s1q1" value="1" required>
+                                    <label for="s1q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q1_2" name="s1q1" value="2">
+                                    <label for="s1q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q1_3" name="s1q1" value="3">
+                                    <label for="s1q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q1_4" name="s1q1" value="4">
+                                    <label for="s1q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q1_5" name="s1q1" value="5">
+                                    <label for="s1q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">1.2) มีวินัย ตรงต่อเวลารับผิดชอบต่อตนเองและสังคม เคารพกฎระเบียบและข้อบังคับต่างๆ ขององค์กรและสังคม</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q2_1" name="s1q2" value="1" required>
+                                    <label for="s1q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q2_2" name="s1q2" value="2">
+                                    <label for="s1q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q2_3" name="s1q2" value="3">
+                                    <label for="s1q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q2_4" name="s1q2" value="4">
+                                    <label for="s1q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q2_5" name="s1q2" value="5">
+                                    <label for="s1q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">1.3) มีภาวะความเป็นผู้นำและผู้ตาม สามารถทำงานเป็นหมู่คณะ สามารถแก้ไขข้อขัดแย้ง ตามลำดับความสำคัญ เคารพสิทธิและรับฟังความคิดเห็นของผู้อื่น รวมทั้งเคารพในคุณค่าและศักดิ์ศรีของความเป็นมนุษย์</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q3_1" name="s1q3" value="1" required>
+                                    <label for="s1q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q3_2" name="s1q3" value="2">
+                                    <label for="s1q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q3_3" name="s1q3" value="3">
+                                    <label for="s1q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q3_4" name="s1q3" value="4">
+                                    <label for="s1q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q3_5" name="s1q3" value="5">
+                                    <label for="s1q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">1.4) มีจรรยาบรรณทางวิชาการและวิชาชีพและมีความรับผิดชอบในฐานะผู้ประกอบวิชาชีพรวมถึงเข้าใจถึงบริบททางสังคมของวิชาชีพเทคโนโลยีในแต่ละสาขา ตั้งแต่อดีตจนถึงปัจจุบัน</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q4_1" name="s1q4" value="1" required>
+                                    <label for="s1q4_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q4_2" name="s1q4" value="2">
+                                    <label for="s1q4_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q4_3" name="s1q4" value="3">
+                                    <label for="s1q4_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q4_4" name="s1q4" value="4">
+                                    <label for="s1q4_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s1q4_5" name="s1q4" value="5">
+                                    <label for="s1q4_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3 class="section-title">2. ความรู้</h3>
+                    <div class="question">
+                        <div class="question-text">2.1) สามารถวิเคราะห์และแก้ไขปัญหา ด้วยวิธีที่เหมาะสม รวมถึงการประยุกต์ใช้เครื่องมือเหมาะสม เช่น โปรแกรมคอมพิวเตอร์ เป็นต้น</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q1_1" name="s2q1" value="1" required>
+                                    <label for="s2q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q1_2" name="s2q1" value="2">
+                                    <label for="s2q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q1_3" name="s2q1" value="3">
+                                    <label for="s2q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q1_4" name="s2q1" value="4">
+                                    <label for="s2q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q1_5" name="s2q1" value="5">
+                                    <label for="s2q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">2.2) สามารถใช้ความรู้และทักษะในสาขาวิชาของตน ในการประยุกต์แก้ไขปัญหาในงานจริงได้</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q2_1" name="s2q2" value="1" required>
+                                    <label for="s2q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q2_2" name="s2q2" value="2">
+                                    <label for="s2q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q2_3" name="s2q2" value="3">
+                                    <label for="s2q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q2_4" name="s2q2" value="4">
+                                    <label for="s2q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q2_5" name="s2q2" value="5">
+                                    <label for="s2q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">2.3) มีความรู้และความเข้าใจเกี่ยวกับหลักการที่สำคัญ ทั้งด้านเชิงทฤษฎีและปฏิบัติ เนื้อหาของสาขาวิชาเฉพาะด้านทางเทคโนโลยี</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q3_1" name="s2q3" value="1" required>
+                                    <label for="s2q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q3_2" name="s2q3" value="2">
+                                    <label for="s2q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q3_3" name="s2q3" value="3">
+                                    <label for="s2q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q3_4" name="s2q3" value="4">
+                                    <label for="s2q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s2q3_5" name="s2q3" value="5">
+                                    <label for="s2q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3 class="section-title">3. ทักษะทางปัญญา</h3>
+                    <div class="question">
+                        <div class="question-text">3.1) มีจินตนาการและความยืดหยุ่น ในการปรับใช้องค์ความรู้ที่เกี่ยวข้องได้อย่างเหมาะสมในการพัฒนาด้านนวัตกรรมหรือต่อยอดองค์ความรู้จากเดิมได้อย่างสร้างสรรค์</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q1_1" name="s3q1" value="1" required>
+                                    <label for="s3q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q1_2" name="s3q1" value="2">
+                                    <label for="s3q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q1_3" name="s3q1" value="3">
+                                    <label for="s3q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q1_4" name="s3q1" value="4">
+                                    <label for="s3q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q1_5" name="s3q1" value="5">
+                                    <label for="s3q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">3.2) สามารถคิด วิเคราะห์ และแก้ไขปัญหาด้านเทคโนโลยีได้อย่างมีระบบ รวมถึงการใช้ข้อมูลประกอบการตัดสินใจในการทำงานได้อย่างมีประสิทธิภาพ</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q2_1" name="s3q2" value="1" required>
+                                    <label for="s3q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q2_2" name="s3q2" value="2">
+                                    <label for="s3q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q2_3" name="s3q2" value="3">
+                                    <label for="s3q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q2_4" name="s3q2" value="4">
+                                    <label for="s3q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q2_5" name="s3q2" value="5">
+                                    <label for="s3q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">3.3) สามารถสืบค้นข้อมูลและแสวงหาความรู้เพิ่มเติมได้ด้วยตนเองเพื่อการเรียนรู้ตลอดชีวิตและทันต่อการเปลี่ยนแปลงทางองค์ความรู้และเทคโนโลยีใหม่ๆ</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q3_1" name="s3q3" value="1" required>
+                                    <label for="s3q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q3_2" name="s3q3" value="2">
+                                    <label for="s3q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q3_3" name="s3q3" value="3">
+                                    <label for="s3q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q3_4" name="s3q3" value="4">
+                                    <label for="s3q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s3q3_5" name="s3q3" value="5">
+                                    <label for="s3q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3 class="section-title">4. ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบ</h3>
+                    <div class="question">
+                        <div class="question-text">4.1) สามารถวางแผน และรับผิดชอบในการพัฒนาการเรียนรู้ทั้งของตนเอง และสอดคล้องกับทางวิชาชีพอย่างต่อเนื่อง</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q1_1" name="s4q1" value="1" required>
+                                    <label for="s4q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q1_2" name="s4q1" value="2">
+                                    <label for="s4q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q1_3" name="s4q1" value="3">
+                                    <label for="s4q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q1_4" name="s4q1" value="4">
+                                    <label for="s4q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q1_5" name="s4q1" value="5">
+                                    <label for="s4q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">4.2) รู้จักบทบาทหน้าที่ และความรับผิดชอบในการทำงานตามที่มอบหมาย ทั้งงานบุคคลและงานกลุ่ม สามารถปรับตัวและทำงานร่วมกับผู้อื่นทั้งในฐานะผู้นำและผู้ตามได้อย่างมีประสิทธิภาพสามารถวางตัวได้อย่างเหมาะสมกับความรับผิดชอบ</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q2_1" name="s4q2" value="1" required>
+                                    <label for="s4q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q2_2" name="s4q2" value="2">
+                                    <label for="s4q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q2_3" name="s4q2" value="3">
+                                    <label for="s4q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q2_4" name="s4q2" value="4">
+                                    <label for="s4q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q2_5" name="s4q2" value="5">
+                                    <label for="s4q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">4.3) มีจิตสำนึกความรับผิดชอบด้านความปลอดภัยในการทำงาน และการรักษาสภาพแวดล้อมต่อสังคม</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q3_1" name="s4q3" value="1" required>
+                                    <label for="s4q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q3_2" name="s4q3" value="2">
+                                    <label for="s4q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q3_3" name="s4q3" value="3">
+                                    <label for="s4q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q3_4" name="s4q3" value="4">
+                                    <label for="s4q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s4q3_5" name="s4q3" value="5">
+                                    <label for="s4q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3 class="section-title">5. ทักษะการวิเคราะห์เชิงตัวเลข การสื่อสาร และการใช้เทคโนโลยีสารสนเทศ</h3>
+                    <div class="question">
+                        <div class="question-text">5.1) มีทักษะการใช้คอมพิวเตอร์ สำหรับการทำงานที่เกี่ยวข้องกับวิชาชีพได้เป็นอย่างดี</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q1_1" name="s5q1" value="1" required>
+                                    <label for="s5q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q1_2" name="s5q1" value="2">
+                                    <label for="s5q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q1_3" name="s5q1" value="3">
+                                    <label for="s5q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q1_4" name="s5q1" value="4">
+                                    <label for="s5q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q1_5" name="s5q1" value="5">
+                                    <label for="s5q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">5.2) สามารถประยุกต์ใช้เทคโนโลยีสารสนเทศและการสื่อสารที่ทันสมัยได้ อย่างเหมาะสมและมีประสิทธิภาพ</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q2_1" name="s5q2" value="1" required>
+                                    <label for="s5q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q2_2" name="s5q2" value="2">
+                                    <label for="s5q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q2_3" name="s5q2" value="3">
+                                    <label for="s5q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q2_4" name="s5q2" value="4">
+                                    <label for="s5q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q2_5" name="s5q2" value="5">
+                                    <label for="s5q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">5.3) สามารถใช้เครื่องมือการคำนวณและเครื่องมือทางเทคโนโลยี เพื่อประกอบวิชาชีพในสาขาเทคโนโลยีที่เกี่ยวข้องได้</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q3_1" name="s5q3" value="1" required>
+                                    <label for="s5q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q3_2" name="s5q3" value="2">
+                                    <label for="s5q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q3_3" name="s5q3" value="3">
+                                    <label for="s5q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q3_4" name="s5q3" value="4">
+                                    <label for="s5q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s5q3_5" name="s5q3" value="5">
+                                    <label for="s5q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3 class="section-title">6. ทักษะการปฏิบัติงาน</h3>
+                    <div class="question">
+                        <div class="question-text">6.1) มีทักษะปฏิบัติการใช้เครื่องมือและอุปกรณ์พื้นฐานรวมถึงเทคโนโลยีเพื่อประกอบวิชาชีพ ในสาขาที่เกี่ยวข้องได้อย่างถูกต้องและปลอดภัย</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q1_1" name="s6q1" value="1" required>
+                                    <label for="s6q1_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q1_2" name="s6q1" value="2">
+                                    <label for="s6q1_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q1_3" name="s6q1" value="3">
+                                    <label for="s6q1_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q1_4" name="s6q1" value="4">
+                                    <label for="s6q1_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q1_5" name="s6q1" value="5">
+                                    <label for="s6q1_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">6.2) สามารถบูรณาการการเรียนรู้ร่วมกับการทำงาน</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q2_1" name="s6q2" value="1" required>
+                                    <label for="s6q2_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q2_2" name="s6q2" value="2">
+                                    <label for="s6q2_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q2_3" name="s6q2" value="3">
+                                    <label for="s6q2_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q2_4" name="s6q2" value="4">
+                                    <label for="s6q2_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q2_5" name="s6q2" value="5">
+                                    <label for="s6q2_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-text">6.3) สามารถปฏิบัติงานจริงในสถานประกอบการ</div>
+                        <div class="rating-group">
+                            <span class="rating-label">ต้องปรับปรุง</span>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q3_1" name="s6q3" value="1" required>
+                                    <label for="s6q3_1">1</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q3_2" name="s6q3" value="2">
+                                    <label for="s6q3_2">2</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q3_3" name="s6q3" value="3">
+                                    <label for="s6q3_3">3</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q3_4" name="s6q3" value="4">
+                                    <label for="s6q3_4">4</label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="s6q3_5" name="s6q3" value="5">
+                                    <label for="s6q3_5">5</label>
+                                </div>
+                            </div>
+                            <span class="rating-label">ดี</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Section -->
+                <div id="scoresSummary" class="scores-summary" style="display: none;">
+                    <h4>สรุปคะแนนการประเมิน</h4>
+                    <div id="scoresDisplay"></div>
+                </div>
+
+                <!-- Additional Comments -->
+                <div class="section">
+                    <div class="form-group">
+                        <label class="form-label" for="strengths">จุดเด่นของนักศึกษาฝึกงาน</label>
+                        <textarea id="strengths" name="strengths" class="textarea" placeholder="กรุณาระบุจุดเด่นของนักศึกษา..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="improvements">ข้อควรปรับปรุงของนักศึกษาฝึกงาน</label>
+                        <textarea id="improvements" name="improvements" class="textarea" placeholder="กรุณาระบุข้อควรปรับปรุง..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="additionalComments">ข้อคิดเห็นเพิ่มเติม หรือข้อเสนอแนะ</label>
+                        <textarea id="additionalComments" name="additionalComments" class="textarea" placeholder="กรุณาระบุข้อคิดเห็นเพิ่มเติม..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">บันทึกข้อมูล</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
