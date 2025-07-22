@@ -38,7 +38,7 @@ function updateScoresSummary() {
       hasScores = true;
       scoresHtml += `
                         <div class="score-item">
-                            <span>${section.name}:</span>
+                            <span style="font-weight: bold;">${section.name}:</span>
                             <span>${sectionTotal} คะแนน (จาก ${section.count * 5} คะแนน)</span>
                         </div>
                     `;
