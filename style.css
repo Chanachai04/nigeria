@@ -232,6 +232,7 @@ body {
 .scores-summary h4 {
   color: #0f172a;
   margin-bottom: 10px;
+  font-size: 18px;  
 }
 
 .score-item {
